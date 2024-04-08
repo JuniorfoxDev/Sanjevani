@@ -7,7 +7,8 @@ from model import ImprovedTinyVGGModel
 from utils import *
 
 def main():
-    st.title("Ocular Eye Disease Classification")
+    st.title("Sanjevani")
+    st.markdown('<h5 style="text-align:center;>Retinal Disease Detection</h5>')
 
     # Setting device agnostic code
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
