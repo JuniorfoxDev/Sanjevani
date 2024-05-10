@@ -61,8 +61,7 @@ def main():
 
         # Display prediction label and confidence rate on the left column
         col1.write(f"Predicted eye disease: **{predicted_label[0]}**")
-        
-
+        col13.write("PainKiller")
         # Display the uploaded image on the right column
         with col2:
             image = Image.open(custom_image_path)
