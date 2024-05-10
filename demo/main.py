@@ -57,7 +57,7 @@ def main():
             unsafe_allow_html=True
         )
 
-        col1, col2 ,col13 = st.columns([1, 3])
+        col1, col2  = st.columns([1, 3])
 
         # Display prediction label and confidence rate on the left column
         col1.write(f"Predicted eye disease: **{predicted_label[0]}**")
