@@ -66,6 +66,6 @@ def main():
         with col2:
             image = Image.open(custom_image_path)
             st.image(image, caption='Uploaded Image', use_column_width=True)
-        col13.write("PainKiller")
+        st.write("PainKiller")
 if __name__ == "__main__":
     main()
