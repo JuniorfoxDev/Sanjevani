@@ -9,9 +9,9 @@ from utils import load_and_preprocess_image, predict_image
 # Dictionary to store treatment information for each disease
 treatment_info = {
     'AMD': 
-    "Treatment for AMD depends on the type (dry or wet) and severity.,
-        For dry AMD: management typically involves lifestyle changes such as a diet rich in antioxidants,
-           certain vitamins and minerals (like vitamin C, E, zinc, copper, lutein, and zeaxanthin), and quitting smoking.
+    "Treatment for AMD depends on the type (dry or wet) and severity.
+        For dry AMD: management typically involves lifestyle changes such as a diet rich in antioxidants
+           certain vitamins and minerals (like vitamin C, E, zinc, copper, lutein, and zeaxanthin) and quitting smoking.
         For wet AMD: treatments may include injections of medications called anti-VEGF drugs, photodynamic therapy, or laser surgery.",
     'Cataract': "Surgery is the only effective treatment for cataracts. During cataract surgery, the clouded lens is removed and replaced with an artificial lens.",
     'Glaucoma': "Treatment aims to lower intraocular pressure to prevent further damage to the optic nerve.
