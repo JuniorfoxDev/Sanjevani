@@ -8,10 +8,17 @@ from utils import load_and_preprocess_image, predict_image
 
 # Dictionary to store treatment information for each disease
 treatment_info = {
-    'AMD': "Age-related macular degeneration (AMD) treatment may include injections, laser therapy, or photodynamic therapy.",
-    'Cataract': "Cataract treatment typically involves surgery to remove the cloudy lens and replace it with an artificial one.",
-    'Glaucoma': "Treatment for glaucoma usually involves prescription eye drops, oral medications, laser therapy, or surgery.",
-    'Myopia': "Myopia can be managed with prescription glasses, contact lenses, or refractive surgery.",
+    'AMD': 
+    "Treatment for AMD depends on the type (dry or wet) and severity.
+        For dry AMD: management typically involves lifestyle changes such as a diet rich in antioxidants,
+           certain vitamins and minerals (like vitamin C, E, zinc, copper, lutein, and zeaxanthin), and quitting smoking.
+        For wet AMD: treatments may include injections of medications called anti-VEGF drugs, photodynamic therapy, or laser surgery.",
+    'Cataract': "Surgery is the only effective treatment for cataracts. During cataract surgery, the clouded lens is removed and replaced with an artificial lens.",
+    'Glaucoma': "Treatment aims to lower intraocular pressure to prevent further damage to the optic nerve.
+                Eye drops are usually the first line of treatment. These medications help reduce intraocular pressure.
+                Laser trabeculoplasty or conventional surgery may be necessary if eye drops are ineffective.",
+    'Myopia': "Eyeglasses or contact lenses are the most common and effective ways to correct myopia.
+                Orthokeratology involves wearing specially designed contact lenses overnight to reshape the cornea temporarily.",
     'Non-eye': "The detected condition does not seem to be an eye disease. Consult a healthcare professional for further evaluation.",
     'Normal': "No eye disease detected. Continue regular eye check-ups for preventive care."
 }
