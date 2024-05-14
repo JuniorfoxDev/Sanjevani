@@ -5,7 +5,6 @@ from PIL import Image
 from pathlib import Path
 from model import ImprovedTinyVGGModel
 from utils import load_and_preprocess_image, predict_image
-import requests
 
 # Dictionary to store treatment information for each disease
 treatment_info = {
@@ -16,14 +15,6 @@ treatment_info = {
     'Non-eye': "The detected condition does not seem to be an eye disease. Consult a healthcare professional for further evaluation.",
     'Normal': "No eye disease detected. Continue regular eye check-ups for preventive care."
 }
-
-def get_nearby_doctors(latitude, longitude):
-    url = f"https://api.practo.com/search/?city=bangalore&locality=whitefield&searchfor=specialization&speciality=dentist&q=alice&offset=40&limit=10&near=12.303%2C74.112&filters="
-    response = requests.get(url)
-    if response.status_code == 200:
-        return response.json()
-    else:
-        return None
 
 def main():
     st.title("Sanjevani")
@@ -89,18 +80,6 @@ def main():
         with col2:
             image = Image.open(custom_image_path)
             st.image(image, caption='Uploaded Image', use_column_width=True)
-
-        # Fetch and display nearby retina specialist doctors
-        st.subheader("Nearby Retina Specialist Doctors")
-        latitude = st.number_input("Enter Latitude:")
-        longitude = st.number_input("Enter Longitude:")
-        if latitude != 0 and longitude != 0:
-            doctors = get_nearby_doctors(latitude, longitude)
-            if doctors:
-                for doctor in doctors:
-                    st.write(f"- {doctor['name']}, {doctor['address']}")
-            else:
-                st.write("Failed to fetch nearby doctors. Please try again later.")
 
 if __name__ == "__main__":
     main()
