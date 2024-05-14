@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicted Disease</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        h1 {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="predicted-disease">Predicted Disease</h1>
+    </div>
+    <script>
+        // Get the predicted disease from the URL query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const disease = urlParams.get('disease');
+
+        // Display the predicted disease on the webpage
+        const diseaseHeading = document.getElementById('predicted-disease');
+        diseaseHeading.textContent = `Predicted Disease: ${disease}`;
+    </script>
+</body>
+</html>
