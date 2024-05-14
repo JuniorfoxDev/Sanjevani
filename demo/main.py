@@ -18,7 +18,7 @@ treatment_info = {
 }
 
 def get_nearby_doctors(latitude, longitude):
-    url = f"https://api.practo.com/doctors/phonenumber?relation_id="
+    url = f"https://api.practo.com/search/?city=bangalore&locality=whitefield&searchfor=specialization&speciality=dentist&q=alice&offset=40&limit=10&near=12.303%2C74.112&filters="
     response = requests.get(url)
     if response.status_code == 200:
         return response.json()
