@@ -63,7 +63,7 @@ def main():
         if redirect_button:
             # Redirect to prediction_result.html with the predicted disease as query parameter
             predicted_disease_url = f"predication_result.html?disease={predicted_label[0]}"
-            st.markdown(f'<script>window.location.href="{predicted_disease_url}"</script>', unsafe_allow_html=True)
+            st.markdown(f'<script>window.open("{predicted_disease_url}","_blank")</script>', unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
