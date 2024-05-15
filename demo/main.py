@@ -80,6 +80,13 @@ def main():
         with col2:
             image = Image.open(custom_image_path)
             st.image(image, caption='Uploaded Image', use_column_width=True)
+        # Redirect button to display predicted disease in a webpage
+        redirect_button = st.button("Show Predicted Disease")
+
+        if redirect_button:
+            # Redirect to prediction_result.html with the predicted disease as query parameter
+            predicted_disease_url = f"prediction_result.html?disease={predicted_label[0]}"
+            st.markdown(f'<script>window.open("{predicted_disease_url}","_blank")</script>', unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
